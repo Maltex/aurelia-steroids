@@ -1,0 +1,13 @@
+<template>
+  <section class="au-animate">
+      <h2>Deals</h2>
+      <div class="row au-stagger">
+        <div class="col-sm-6 col-md-3 flickr-img au-animate" repeat.for="deal of deals">
+          <a class="thumbnail">
+            <h3>${deal.name}</h3>
+            <a route-href="route: deal; params.bind: { id: deal.id }">Details</a>
+          </a>
+        </div>
+      </div>
+  </section>
+</template>
