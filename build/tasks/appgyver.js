@@ -46,5 +46,5 @@ gulp.task('copy-styles', function () {
 gulp.task('copy-jspm', function () {
   return gulp.src(paths.jspm + '**/*')
     .pipe(changed(paths.appgyverRoot + paths.jspm))
-    .pipe(gulp.dest(paths.appgyverRoot));
+    .pipe(gulp.dest(paths.appgyverRoot + paths.jspm));
 });

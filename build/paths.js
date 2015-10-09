@@ -18,5 +18,5 @@ module.exports = {
   e2eSpecsDist: 'test/e2e/dist/',
   appBuild: outputRoot + 'app-build.js',
   appAurelia: outputRoot + 'aurelia.js',
-  jspm: 'jspm_packages'
+  jspm: 'jspm_packages/'
 };

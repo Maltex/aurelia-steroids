@@ -20,5 +20,15 @@ gulp.task('watch', ['serve'], function() {
   gulp.watch('loading.html', ['copy-loadinghtml', browserSync.reload]).on('change', reportChange);
   gulp.watch('native-styles/**/*', ['copy-native', browserSync.reload]).on('change', reportChange);
   gulp.watch('config.js', ['copy-configjs', browserSync.reload]).on('change', reportChange);
-  runSequence('bundle', 'copy-dist', 'copy-configjs', 'copy-indexhtml');
+  runSequence(
+    'bundle', 
+    'copy-bundle', 
+    'copy-native', 
+    'copy-jspm', 
+    'copy-dist', 
+    'copy-configjs',
+    'copy-styles', 
+    'copy-loadinghtml', 
+    'copy-indexhtml'
+  );
 });
